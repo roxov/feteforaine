@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import fr.asterox.feteforaine.core.Player;
 import fr.asterox.feteforaine.words.WordStore;
+import fr.asterox.feteforaine.words.corridorsoftime.CorridorsOfTime;
 import fr.asterox.feteforaine.words.spinachword.Spinachword;
 
 public class Order {
@@ -23,7 +24,7 @@ public class Order {
 	public void displayAvailableMenus() {
 		System.out.println("Qu'est-ce qu'on te sert ? \r\nVoilà l'ardoise :\r\n");
 		System.out.println("Bière \r\nPotion magique\r\nFiole marquée \"Buvez-moi\"---------------- \r\n"
-				+ "Epinards \r\nChampignon magique géant");
+				+ "Epinards \r\nChampignon magique géant\r\nGourdasse d'Eusèbius");
 		
 	
 	}
@@ -37,20 +38,23 @@ public class Order {
 				!menuName.equalsIgnoreCase("Potion magique") &&
 				!menuName.equalsIgnoreCase("Champignon magique géant") &&
 				!menuName.equalsIgnoreCase("Champignon magique jaune" ) &&
-				!menuName.equalsIgnoreCase("Epinards" )) {
+				!menuName.equalsIgnoreCase("Epinards" ) &&
+				!menuName.equalsIgnoreCase("Gourdasse d'Eusèbius" )) {
 			System.out.println("T'es bigleux ou quoi ? C'est pas sur l'ardoire ça ! Tu veux quoi ?");
 			menuName = sc.nextLine();
 		}
 		// Plus tard utiliser un switch pour rentrer dans les fonctions de chaque aliment.
 		
-		if(menuName.equalsIgnoreCase("Epinards")) {
-			WordStore.getWord(Spinachword.class).comeIn(players, sc);
-		}
-		
 		System.out.println("Et 1 " + menuName + " pour " + "playerName" + " !");
 		/** Affiche le menu sélectionné */
 		// tu prendras autre chose ? gloups !
 		
+//		if(menuName.equalsIgnoreCase("Epinards")) {
+//			WordStore.getWord(Spinachword.class).comeIn(players, sc);
+//		}
+		if(menuName.equalsIgnoreCase("Gourdasse d'Eusèbius")) {
+			WordStore.getWord(CorridorsOfTime.class).comeIn(players, sc);
+		}
 		
 	}
 	
