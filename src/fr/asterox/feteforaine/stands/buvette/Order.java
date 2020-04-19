@@ -1,17 +1,22 @@
 package fr.asterox.feteforaine.stands.buvette;
 
+import java.util.List;
 import java.util.Scanner;
+
+import fr.asterox.feteforaine.core.Player;
+import fr.asterox.feteforaine.words.WordStore;
+import fr.asterox.feteforaine.words.spinachword.Spinachword;
 
 public class Order {
 	/** Attribut qui peut être utilisé dans toute la classe et qui prédéfinit l'objet instancié comme un standard input 
 	 * final empèche la référence Scanner d'être modifiée mais le contenu peut changer
 	 */
-	private final Scanner sc = new Scanner(System.in);
+	//private final Scanner sc = new Scanner(System.in);
 	
 		
-	public void runMenu() {
+	public void runMenu(List<Player> players, Scanner sc) {
 	this.displayAvailableMenus();
-	this.displaySelectedMenu(sc);
+	this.displaySelectedMenu(players, sc);
 	}
 	
 	/** Affiche tous les plats disponibles */	
@@ -23,16 +28,24 @@ public class Order {
 	
 	}
 	
-	public void displaySelectedMenu(Scanner sc) {
+	public void displaySelectedMenu(List<Player> players, Scanner sc) {
 				
 		String menuName = sc.nextLine();
 		/** String input */
 		
-		while (!menuName.equalsIgnoreCase("Bière") && !menuName.equalsIgnoreCase("Potion magique") && !menuName.equalsIgnoreCase("Champignon magique géant") && !menuName.equalsIgnoreCase("Champignon magique jaune" )) {
+		while (!menuName.equalsIgnoreCase("Bière") &&
+				!menuName.equalsIgnoreCase("Potion magique") &&
+				!menuName.equalsIgnoreCase("Champignon magique géant") &&
+				!menuName.equalsIgnoreCase("Champignon magique jaune" ) &&
+				!menuName.equalsIgnoreCase("Epinards" )) {
 			System.out.println("T'es bigleux ou quoi ? C'est pas sur l'ardoire ça ! Tu veux quoi ?");
 			menuName = sc.nextLine();
 		}
 		// Plus tard utiliser un switch pour rentrer dans les fonctions de chaque aliment.
+		
+		if(menuName.equalsIgnoreCase("Epinards")) {
+			WordStore.getWord(Spinachword.class).comeIn(players, sc);
+		}
 		
 		System.out.println("Et 1 " + menuName + " pour " + "playerName" + " !");
 		/** Affiche le menu sélectionné */
