@@ -14,8 +14,8 @@ public class Buvette extends Stand {
 	@Override
 	public void comeIn(List<Player> players, Scanner sc) {
 		System.out.println("\r\n\r\nLa buvette est antique, comme le reste des stands. "
-				+ "Elle baigne dans un décor rouge avec des touches de bois sombre.\r\n"
-				+ "Elle donne envie d'y rester se détendre...contrairement au serveur...\r\n\r\n\r\n");
+				+ "Elle baigne dans un dÃ©cor rouge avec des touches de bois sombre.\r\n"
+				+ "Elle donne envie d'y rester se dÃ©tendre...contrairement au serveur...\r\n\r\n\r\n");
 		new Order().runMenu();
 		
 

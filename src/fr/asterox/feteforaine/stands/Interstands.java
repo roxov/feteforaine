@@ -16,8 +16,8 @@ public class Interstands {
 	}
 	
 	public void exit(List<Player> players, Scanner sc) {
-	System.out.println("\r\nAlors, sur quel stand souhaites-tu aller ?\r\n\r\n(Tapez la lettre désirée.)\r\n");
-		// Une fois tous les stands créés, afficher une liste ?
+	System.out.println("\r\nAlors, sur quel stand souhaites-tu aller ?\r\n\r\n(Tapez la lettre dÃ©sirÃ©e.)\r\n");
+		// Une fois tous les stands crÃ©Ã©s, afficher une liste ?
 				System.out.println("B - Buvette\r\nC - Chamboultout\r\nM - Mailloche");
 				String standNumber = sc.nextLine();
 				

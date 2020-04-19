@@ -6,7 +6,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
-//import java.util.* permet de citer toutes les classes contenues par java.io. sans faire appel à leur nom canonique (complet). 
+//import java.util.* permet de citer toutes les classes contenues par java.io. sans faire appel ï¿½ leur nom canonique (complet). 
 import java.util.Scanner;
 
 import fr.asterox.feteforaine.core.Player;
@@ -25,15 +25,15 @@ public class Accueil extends Stand {
 				+ " |    |   \\  \\  ___/|   |  \\   /\\  ___/|   |  \\  |  /\\  ___/ \r\n"
 				+ " |______  /__|\\___  >___|  /\\_/  \\___  >___|  /____/  \\___  >\r\n"
 				+ "        \\/        \\/     \\/          \\/     \\/            \\/\r\n\r\n"
-				+ "               à la fête forraine d'Asterox\r\n\r\n\r\n\r\n"
-				+ "(Appuyez sur Entrée pour découvrir ce monde magnifique)");
+				+ "               Ã  la fÃªte forraine d'Asterox\r\n\r\n\r\n\r\n"
+				+ "(Appuyez sur EntrÃ©e pour dÃ©couvrir ce monde magnifique)");
 
 		sc.nextLine();
 		if(players.isEmpty()) {
 			players.add(this.askForNewPlayer(sc));
 		}
 /* 
- * Il est préférable d'appeler les méthodes par this. avant de rédiger le bloc de la méthode.
+ * Il est prÃ©fÃ©rable d'appeler les mÃ©thodes par this. avant de rÃ©diger le bloc de la mÃ©thode.
  */
 		this.welcomeToday();
 		this.exit(players, sc);
@@ -41,7 +41,7 @@ public class Accueil extends Stand {
 
 	
 
-	/* Cette méthode doit retourner un type objet : Player (ou String par exemple) quelle que soit la situation (créer 2 return : un dans try et un dans catch).
+	/* Cette mÃ©thode doit retourner un type objet : Player (ou String par exemple) quelle que soit la situation (crÃ©er 2 return : un dans try et un dans catch).
 	 */
 	private Player askForNewPlayer(Scanner sc) {
 		Player player = new Player();
@@ -54,9 +54,9 @@ public class Accueil extends Stand {
 
 		System.out.println("Ravi de te rencontrer " + name + " !");
 		/*
-		 * return renvoie uniquement la valeur. Donc la variable name définit dans le
-		 * scope try (soit entre {}) n'existera plus. Pour récupérer la valeur, on peut
-		 * par exemple déclarer une variable en appelant la méthode : String playerName
+		 * return renvoie uniquement la valeur. Donc la variable name dÃ©finit dans le
+		 * scope try (soit entre {}) n'existera plus. Pour rÃ©cupÃ©rer la valeur, on peut
+		 * par exemple dÃ©clarer une variable en appelant la mÃ©thode : String playerName
 		 * = this.askName();
 		 */
 		player.setName(name);
@@ -69,24 +69,24 @@ public class Accueil extends Stand {
 		String month = DateTimeFormatter.ofPattern("MMMM", Locale.FRANCE).format(LocalDate.now());
 		boolean isVowel = "aeiouy".contains(Character.toString(month.charAt(0)));
 		
-		// TODO : créer une classe pour gérer les voyelles
+		// TODO : crÃ©er une classe pour gÃ©rer les voyelles
 		if(LocalTime.now().isBefore(LocalTime.of(9, 0))) {
-			System.out.println("C'est une drôle d'heure pour venir à la fête forraine mais nous allons ouvrir les portes spécialement pour toi.");
+			System.out.println("C'est une drÃ´le d'heure pour venir Ã  la fÃªte forraine mais nous allons ouvrir les portes spÃ©cialement pour toi.");
 		}else if(LocalTime.now().isBefore(LocalTime.of(13, 0))){
 			if (isVowel)
-			System.out.println("C'est une belle matinée d'"+ month + " pour venir à la fête forraine.");
+			System.out.println("C'est une belle matinÃ©e d'"+ month + " pour venir Ã  la fÃªte forraine.");
 			else
-				System.out.println("C'est une belle matinée de "+ month + " pour venir à la fête forraine.");
+				System.out.println("C'est une belle matinÃ©e de "+ month + " pour venir Ã  la fÃªte forraine.");
 		}else if(LocalTime.now().isBefore(LocalTime.of(19, 0))){
 			if (isVowel)
-			System.out.println("C'est un bel après-midi d'" + month + " pour venir à la fête forraine.");
+			System.out.println("C'est un bel aprÃ¨s-midi d'" + month + " pour venir Ã  la fÃªte forraine.");
 			else
-				System.out.println("C'est un bel après-midi de " + month + " pour venir à la fête forraine.");
+				System.out.println("C'est un bel aprÃ¨s-midi de " + month + " pour venir Ã  la fÃªte forraine.");
 		}else {
 			if (isVowel)
-			System.out.println("C'est une belle soirée d'" + month + " pour venir à la fête forraine.");
+			System.out.println("C'est une belle soirÃ©e d'" + month + " pour venir Ã  la fÃªte forraine.");
 			else
-				System.out.println("C'est une belle soirée de " + month + " pour venir à la fête forraine.");
+				System.out.println("C'est une belle soirÃ©e de " + month + " pour venir Ã  la fÃªte forraine.");
 		
 		}
 		
@@ -95,9 +95,9 @@ public class Accueil extends Stand {
 
 
 	public void exit(List<Player> players, Scanner sc) {
-		System.out.println("\r\nNous allons te faire faire un petit voyage dans le temps.\r\nIci tous les stands sont d'époque...\r\n"
-				+ "Mais ne t'inquiète pas, on en a rénové certains depuis que l'homme-canon est resté bloqué en haut du chapiteau AHAHAH\r\n"
-				+ "Oui, tu vas voir, on a même un petit chapiteau que l'on a récupéré d'un vieux cirque !\r\n");
+		System.out.println("\r\nNous allons te faire faire un petit voyage dans le temps.\r\nIci tous les stands sont d'Ã©poque...\r\n"
+				+ "Mais ne t'inquiÃ¨te pas, on en a rÃ©novÃ© certains depuis que l'homme-canon est restÃ© bloquÃ© en haut du chapiteau AHAHAH\r\n"
+				+ "Oui, tu vas voir, on a mÃªme un petit chapiteau que l'on a rÃ©cupÃ©rÃ© d'un vieux cirque !\r\n");
 	Interstands interstands = new Interstands() ;
 		interstands.exit(players, sc);
 	}

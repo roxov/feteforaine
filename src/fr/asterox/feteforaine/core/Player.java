@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class Player {
 
-	// Tant qu'aucune valeur n'est assignée à l'attribut, name vaut null.
+	// Tant qu'aucune valeur n'est assignÃ©e Ã  l'attribut, name vaut null.
 	private String name;
 	private LocalDateTime creationDate;
 	private int strength = 5;
