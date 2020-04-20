@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import fr.asterox.feteforaine.core.Player;
+import fr.asterox.feteforaine.stands.Interstands;
 import fr.asterox.feteforaine.stands.Stand;
 
 public class Chamboultout extends Stand {
@@ -30,7 +31,8 @@ public class Chamboultout extends Stand {
 
 		System.out.println(
 				uneBoite + "\r\n" + deuxBoites + "\r\n" + troisBoites + "\r\n" + quatreBoites);
-
+		
+		this.exit(players, sc);
 	}
 
 	@Override
@@ -44,4 +46,16 @@ public class Chamboultout extends Stand {
 		return letter;
 	}
 
+
+	public void exit(List<Player> players, Scanner sc) {
+
+		System.out.println("\r\nLa partie est finie, vous pouvez continuer à vous promener.\r\n");
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+
+		}
+		Interstands interstands = new Interstands();
+		interstands.exit(players, sc);
+	}
 }

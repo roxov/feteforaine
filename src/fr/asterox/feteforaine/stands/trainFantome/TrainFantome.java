@@ -1,4 +1,4 @@
-package fr.asterox.feteforaine.stands.autotamponneuses;
+package fr.asterox.feteforaine.stands.trainFantome;
 
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import fr.asterox.feteforaine.core.Player;
 import fr.asterox.feteforaine.stands.Interstands;
 import fr.asterox.feteforaine.stands.Stand;
 
-public class Autotamponneuses extends Stand {
+public class TrainFantome extends Stand {
 
 	@Override
 	public String getName() {
@@ -22,15 +22,18 @@ public class Autotamponneuses extends Stand {
 	}
 	@Override
 	public void comeIn(List<Player> players, Scanner sc) {
-		System.out.println("Des autotamponneuses tout ce qu'il y a de plus classique.");
+		System.out.println("Un petit train absolument terrifiant !\r\n"
+				+ "Vous n'êtes toujours pas certain qu'il ne s'agissait pas d'un vrai zombie.\r\n"
+				+ "Vous allez devoir prendre une barbe-à-papa pour cacher le fait que vous vous soyez pissé dessus. ");
+
 		this.exit(players, sc);
 	}
 
 	public void exit(List<Player> players, Scanner sc) {
 
-		System.out.println("\r\nLa partie est finie, vous pouvez continuer à vous promener.\r\n");
+		System.out.println("\r\nLe tour est fini (ouf!), vous pouvez continuer à vous promener.\r\n");
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 
 		}

@@ -1,4 +1,4 @@
-package fr.asterox.feteforaine.stands.autotamponneuses;
+package fr.asterox.feteforaine.stands.derby;
 
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import fr.asterox.feteforaine.core.Player;
 import fr.asterox.feteforaine.stands.Interstands;
 import fr.asterox.feteforaine.stands.Stand;
 
-public class Autotamponneuses extends Stand {
+public class Derby extends Stand {
 
 	@Override
 	public String getName() {
@@ -20,9 +20,14 @@ public class Autotamponneuses extends Stand {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 	@Override
 	public void comeIn(List<Player> players, Scanner sc) {
-		System.out.println("Des autotamponneuses tout ce qu'il y a de plus classique.");
+		System.out.println("- Bienvenue à l'hippodrome ! \r\n- Prends place et choisis ton cheval."
+				+ "- Si tu n'as jamais été à un derby, voici quelques règles simples :\r\n"
+				+ "- Jette ces palets dans les trous avec les plus grandes valeurs pour avancer plus vite."
+				+ "- Comme tu le vois, gagner une course ne dépend pas uniquement de ton cheval mais aussi de ton agilité ! ");
+
 		this.exit(players, sc);
 	}
 

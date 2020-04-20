@@ -16,6 +16,7 @@ public class XXX extends Stand {
 		System.out.println("Coquin ! Tu pensais vraiment qu'il y aurait ce genre de stands ici ?!");
 		Interstands interstands = new Interstands();
 		interstands.exit(players, sc);
+		
 	}
 	
 	@Override

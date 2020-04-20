@@ -1,4 +1,4 @@
-package fr.asterox.feteforaine.stands.autotamponneuses;
+package fr.asterox.feteforaine.stands.hommeCanon;
 
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import fr.asterox.feteforaine.core.Player;
 import fr.asterox.feteforaine.stands.Interstands;
 import fr.asterox.feteforaine.stands.Stand;
 
-public class Autotamponneuses extends Stand {
+public class HommeCanon extends Stand {
 
 	@Override
 	public String getName() {
@@ -20,17 +20,21 @@ public class Autotamponneuses extends Stand {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 	@Override
 	public void comeIn(List<Player> players, Scanner sc) {
-		System.out.println("Des autotamponneuses tout ce qu'il y a de plus classique.");
+		System.out.println("L'homme-Canon est envoyé tellement loin qu'on dirait qu'il atteint la Lune !\r\n"
+				+ "Un peu sonné, il a toujours du mal à retourner à sa roulotte.\r\n"
+				+ "Allez-vous pouvoir le retrouver pour l'aider à rentrer ?");
+
 		this.exit(players, sc);
 	}
 
 	public void exit(List<Player> players, Scanner sc) {
 
-		System.out.println("\r\nLa partie est finie, vous pouvez continuer à vous promener.\r\n");
+		System.out.println("\r\nLe spectacle est terminé, vous pouvez continuer à vous promener.\r\n");
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 
 		}

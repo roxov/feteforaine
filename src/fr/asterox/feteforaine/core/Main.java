@@ -13,7 +13,3 @@ public class Main {
 		sc.close();
 	}
 }
-
-//Order order = new Order ();
-//order.runMenu();
-// Pour l'instant le code ne traite pas les erreurs si on rentre un String (plantage) ou un chiffre tro grand.

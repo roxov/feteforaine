@@ -1,4 +1,4 @@
-package fr.asterox.feteforaine.stands.autotamponneuses;
+package fr.asterox.feteforaine.stands.quizz;
 
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import fr.asterox.feteforaine.core.Player;
 import fr.asterox.feteforaine.stands.Interstands;
 import fr.asterox.feteforaine.stands.Stand;
 
-public class Autotamponneuses extends Stand {
+public class Quizz extends Stand {
 
 	@Override
 	public String getName() {
@@ -22,15 +22,17 @@ public class Autotamponneuses extends Stand {
 	}
 	@Override
 	public void comeIn(List<Player> players, Scanner sc) {
-		System.out.println("Des autotamponneuses tout ce qu'il y a de plus classique.");
+		System.out.println("Des quizz et des énigmes... Tout ce que j'aime... ");
+
 		this.exit(players, sc);
 	}
 
 	public void exit(List<Player> players, Scanner sc) {
 
-		System.out.println("\r\nLa partie est finie, vous pouvez continuer à vous promener.\r\n");
+		System.out.println("\r\nVos neurones commencent à chauffer, vous pouvez continuer à vous promener.\r\n"
+				+ "Après tout, on est là pour s'amuser !");
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 
 		}
