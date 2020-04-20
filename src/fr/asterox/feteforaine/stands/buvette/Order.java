@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import fr.asterox.feteforaine.core.Player;
-import fr.asterox.feteforaine.words.WordStore;
-import fr.asterox.feteforaine.words.corridorsoftime.CorridorsOfTime;
+import fr.asterox.feteforaine.worlds.WorldStore;
+import fr.asterox.feteforaine.worlds.corridorsoftime.CorridorsOfTime;
 
 public class Order {
 	
@@ -48,7 +48,7 @@ public class Order {
 //			WordStore.getWord(Spinachword.class).comeIn(players, sc);
 //		}
 		if(menuName.equalsIgnoreCase("Gourdasse d'Eusèbius")) {
-			WordStore.getWord(CorridorsOfTime.class).comeIn(players, sc);
+			WorldStore.getWord(CorridorsOfTime.class).comeIn(players, sc);
 		}
 		
 	}

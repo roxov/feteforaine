@@ -1,1 +1,0 @@
-package fr.asterox.feteforaine.words.corridorsoftime;

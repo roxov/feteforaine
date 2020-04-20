@@ -1,12 +1,12 @@
-package fr.asterox.feteforaine.words.corridorsoftime;
+package fr.asterox.feteforaine.worlds.corridorsoftime;
 
 import java.util.List;
 import java.util.Scanner;
 
 import fr.asterox.feteforaine.core.Player;
-import fr.asterox.feteforaine.words.Word;
+import fr.asterox.feteforaine.worlds.World;
 
-public class CorridorsOfTime implements Word {
+public class CorridorsOfTime implements World {
 
 	@Override
 	public void comeIn(List<Player> players, Scanner sc) {
